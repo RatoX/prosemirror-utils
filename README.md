@@ -474,9 +474,10 @@ npm install prosemirror-utils
    ```
 
 
- * **`createTable`**`(schema: Schema, rowsCount: ?number = 3, colsCount: ?number = 3, withHeaderRow: ?boolean = true) → Node`\
+ * **`createTable`**`(schema: Schema, rowsCount: ?number = 3, colsCount: ?number = 3, withHeaderRow: ?boolean = true, withDefaultNonWidthChar: ?boolean = false) → Node`\
    Returns a table node of a given size.
    `withHeaderRow` defines whether the first row of the table will be a header row.
+   `withDefaultNonWidthChar` adds a empty paragraph for all cells using a non-width char [u200B](http://unicode.org/cldr/utility/character.jsp?a=200B).
 
    ```javascript
    const table = createTable(state.schema); // 3x3 table node
